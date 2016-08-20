@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Native Storage Demo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <h2> Native Storage Sample</h2>
+ <ion-list>
+
+  <ion-item>
+    <ion-label floating>Enter key to be saved</ion-label>
+    <ion-input type="text" [(ngModel)]="native.key"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Enter Value to be saved</ion-label>
+    <ion-input type="text" [(ngModel)]="native.value"></ion-input>
+  </ion-item>
+  
+    <p>Getting Value {{gettingItem}}</p>
+  </ion-list>
+
+   <button outline (click)="saved(native)">Saved Storage</button>
+   <button outline (click)=" getLocal()">Get data from local Storage</button>
+  <ion-item>
+    <ion-label floating>Remove selected</ion-label>
+  <ion-input type="text" [(ngModel)]="selected"></ion-input>
+  </ion-item>
+  <button outline (click)="removeSelected(selected)">Remove Selected</button>
+  <button outline (click)="removeAll()">Remove all</button>
+
+  
+</ion-content>
